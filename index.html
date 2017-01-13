@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Search</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, user-scalable = no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./css/master.css">
+    <script src="./app/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <nav>
+      <img class='logo' src="./images/logo.png" alt="Viki logo"/>
+      <div class='searchWrapper'>
+        <div class="boxwrapper">
+          <input id='searchbox' type="text" value="" placeholder='Search for a movie or show'>
+          <div id="searchResults"></div>
+        </div>
+        <div class="checkbox-wrapper">
+          <input id='withPeople' type="checkbox" value="">
+          <div id='tooltip' class="hidden">Show celebrity information</div>
+        </div>
+      </div>
+    </nav>
+
+    <main class='allResults'>
+      <div class='row' id='results'>
+        <div class="titleMatch" id='base'></div>
+      </div>
+    </main>
+  </body>
+</html>

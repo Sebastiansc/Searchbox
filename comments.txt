@@ -1,0 +1,43 @@
+  I'd like to clarify a few things. I'm doing certain things differently than I
+would if this was an actual site. First, I would break the SearchBox into
+separate components/classes like SearchItem and AutocompleteDropdown. I bundled
+them all into a single class because the pdf said that it was preferable not to
+use any other frameworks. I would normally use Webpack or another package manager
+to export and import files and make the code more modular. I'm aware there are
+ways to import files in JavaScript but they would've been non conventional and
+and overkill given the scope of this problem. Therefore, I found it more sensible
+to keep everything under a single class versus having several classes in the
+same file.
+
+  I'm also assuming the API does not accept a parameter to request different image
+sizes. If it did I would design an algorithm to detect the current screen size
+and calculate what the appropriate image size would be to increase efficiency.
+
+  There doesn't seem to be any celebrity data being served when withPeople
+is true so I'm not able to append any extra information to the html. If there is
+data being passed it could be easily added by editing SearchBox#_itemTag.
+
+There are some inconsistencies with the response data:
+  - When the search string c = a it will, sometimes, return a set of results
+    where two of the objects have a tt that begins with 'A'. Other times, it will
+    return a set of results where there are 5 objects which tts begin with 'A'.
+    Without access to the backend I can't really pinpoint the source of this
+    problem.
+
+  - It does not contain all the matching titles. When searching for 'a' this
+    `data` is sent:
+      for (let id in `data`) {
+        console.log(`data`[id].tt);
+      }
+      Far Away Love
+      Love Me If You Dare
+      Rookie Agent Rouge
+      Woman With a Suitcase
+      Aim High
+      Sun After the Rain
+      Teddy Go!
+      After The Rain
+    There are other titles containing 'a' like 'Angel 'n' Devil', 'Angry Mom'...
+
+  - The API doesn't take language into account so it will return titles as
+    "matching" when only one of their foreign titles match.

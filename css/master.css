@@ -1,0 +1,181 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  padding-top: 66px;
+  position: relative;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*----------------------- SEARCHBOX --------------------------*/
+
+#searchbox {
+  margin-right: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#searchbox:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#tooltip {
+  position: absolute;
+  left: 20px;
+  top: -10px;
+  color: white;
+  font-size: 10px;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+nav {
+  background: #313233;
+  display: flex;
+  padding: 20px;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.titleMatch {
+  background: white;
+  cursor: pointer;
+  color: black;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+
+.titleMatch:hover {
+  background: #dedfe0;
+}
+
+.searchWrapper {
+  position: relative;
+  align-items: center;
+  display: flex;
+  padding: 0;
+  margin-right: 10px;
+}
+
+#searchResults {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  left: 0;
+}
+
+.selected {
+  background: #dedfe0;
+}
+
+.logo {
+  height: 3rem;
+}
+
+/*----------------------- SEARCHBOX END --------------------------*/
+
+/*----------------------- RESULTS --------------------------*/
+
+.allResults {
+  width: 80%;
+  margin: 6rem auto;
+}
+
+.sub {
+  font-size: 1rem;
+}
+
+.col-overlay {
+  padding: 10px 0 0 10px;
+  width: 100%;
+  height: 45%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 21%, rgba(0,0,0,0.55) 37%, rgba(0,0,0,0.43) 49%, rgba(0,0,0,0.4) 51%, rgba(0,0,0,0) 83%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 21%,rgba(0,0,0,0.55) 37%,rgba(0,0,0,0.43) 49%,rgba(0,0,0,0.4) 51%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 21%,rgba(0,0,0,0.55) 37%,rgba(0,0,0,0.43) 49%,rgba(0,0,0,0.4) 51%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 100%);
+}
+
+.col {
+  color: white;
+  font-size: 1.4rem;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.boxwrapper {
+  position: relative;
+  width: 100%;
+  margin-right: 10px;
+}
+
+#base {
+  display: none;
+}
+/*----------------------- RESULTS END --------------------------*/
+
+@media(min-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  #searchbox {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .searchWrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 48%;
+    height: 600px;;
+    margin-right: 10px;
+  }
+}
+
+@media(min-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+
+  #searchbox {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .searchWrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 32%;
+    height: 500px;;
+    margin-right: 10px;
+  }
+}
